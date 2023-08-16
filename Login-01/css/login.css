@@ -1,0 +1,126 @@
+*{
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Cairo', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+.login{
+    height: 100vh;
+    background-image: linear-gradient(145deg, #007eff , #df217d );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+}
+
+.login .box{
+    background-color: white;
+    width: 400px;
+    border-radius: 8px;    
+}
+
+.login .box h2{
+    text-align: center;
+    padding: 20px 0;
+    border-bottom: 1px #eee solid;
+}
+
+.login .box form{
+    padding: 20px;
+}
+.login .box label{
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+
+}
+
+.login .box label span.border{
+
+    width: 0;
+    height: 2px;
+    position: absolute;
+    bottom: 0;
+    background-color: #007eff;
+    left: 0;
+    transition: 0.3s;
+}
+.login .box label span.place-holder{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    padding-left: 10px;
+    color: #777;
+    cursor: text;
+    transition: 0.3s;
+}
+
+.login .box label input{
+    border: none;
+    border-bottom: 2px #d9d9d9 solid;
+    padding: 10px;
+    width: 100%;
+}
+
+.login .box label input:focus ~ span.border,
+.login .box label input:valid ~ span.border
+{
+    width: 100%;
+}
+.login .box label input:focus ~ span.place-holder,
+.login .box label input:valid ~ span.place-holder{
+    color: #007eff;
+    transform: translateY(-35px);
+}
+.login .box span.forget a{
+    color: #777;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.login .box span.forget a:hover,
+.login .box .sign-up span a:hover{
+    text-decoration: underline;
+}
+.login .box  input[type="submit"]{
+    width: 100%;
+    background-color: #007eff;
+    border-radius: 20px;
+    padding: 10px 0;
+    border: none;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    height: 45px;
+    transition: 0.3s;
+    border: 1px solid;
+}
+
+.login .box  input[type="submit"]:hover{
+    border-color: #007eff;
+}
+
+.login .box .sign-up{
+    display: block;
+    color: #777;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login .box .sign-up span a{
+    color: #007eff;
+}
+
+input:focus{
+    outline: none;
+}
